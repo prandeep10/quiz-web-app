@@ -1,0 +1,11 @@
+.challengess-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.challengess-container .challenge-card{
+    width: 400px;
+    margin: 10px;
+}

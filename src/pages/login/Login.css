@@ -1,0 +1,88 @@
+/* General container styling */
+.login-container {
+    width: 400px;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #dbf5e7;
+    text-align: center;
+  }
+  
+  /* Styling the tabs */
+  .tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+  
+  .tabs button {
+    padding: 10px 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: black;
+  }
+  
+  .tabs button:hover,
+  .tabs .active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+    color: #007bff;
+  }
+  
+  /* Styling the form */
+  .form-container {
+    text-align: left;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  form label {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input:focus {
+    border-color: #007bff;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+  

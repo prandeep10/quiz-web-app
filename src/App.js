@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Navbar from './components/navbar/Navbar'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/home/Home';
+import Challenges from './pages/challenges/Challenges';
+import Quizes from './pages/quizes/Quizes';
+import QuizPage from './pages/quizes/1vs1Quiz';
+import Discussion from './pages/discussion/Discussion';
+import About from './pages/about/About';
+import Contact from './pages/contact/Contact';
+import Reward from './pages/reward/Reward';
+import Login from './pages/login/Login';
 
-function App() {
+const App = () => {
+  const isLoggedIn = localStorage.getItem('loggedin') === 'true';
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home/>} />
+      <Route path="/challenges" element={<Challenges/>} />
+      <Route path="/quizes" element={<Quizes/>} />
+      <Route path="/1vs1" element={<QuizPage/>} />
+      <Route path="/discussion" element={<Discussion/>} />
+      <Route path="/about" element={<About/>} />
+      <Route path="/contact" element={<Contact/>} />
+      <Route path="/rewards" element={<Reward/>} />
+      <Route path="/login" element={<Login/>} />
+
+      <Route path="/" render={() => (isLoggedIn ? <Home /> : <Link to="/login" />)} />
+    </Routes>
+  </Router>
+  )
 }
 
-export default App;
+export default App

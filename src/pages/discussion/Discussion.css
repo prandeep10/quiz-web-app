@@ -1,0 +1,145 @@
+.discussion-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    margin-top: 50px;
+  }
+  
+  .discussion-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2rem;
+  }
+  
+  .discussion-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .group-list {
+    margin-bottom: 20px;
+  }
+  
+  .group-list h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .group-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .group-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .group-list li:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .group-list li.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .chat-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .messages {
+    flex: 1;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  .message {
+    margin-bottom: 10px;
+  }
+  
+  .message strong {
+    color: #007bff;
+  }
+  
+  .no-messages {
+    color: #999;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .message-input {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message-input input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .message-input button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .message-input button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media Queries for Mobile Responsiveness */
+  @media (min-width: 600px) {
+    .discussion-content {
+      flex-direction: row;
+    }
+  
+    .group-list {
+      flex: 1;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  
+    .chat-section {
+      flex: 2;
+    }
+  
+    .message-input {
+      flex-direction: row;
+    }
+  
+    .message-input input {
+      flex: 1;
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+  }
+  
